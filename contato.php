@@ -5,11 +5,16 @@ $email = $_POST['email'];
 $assunto = $_POST['assunto'];
 $mensagem = $_POST['mensagem'];
 
-$conn = new mysqli("127.0.0.1", "root", "", "parsers", 3307);
+// Configurações do cPanel
+$host = "localhost";
+$db   = "computacao_parsers_database";
+$user = "computacao_parsers_admin";
+$pass = "parsers@adminccd";
+
+$conn = new mysqli($host, $user, $pass, $db);
 
 if ($conn->connect_error) {
-    header("Location: index.php?status=erro");
-    exit();
+    die("Erro de conexão: " . $conn->connect_error);
 }
 
 $stmt = $conn->prepare("INSERT INTO contatos (nome, email, assunto, mensagem) VALUES (?, ?, ?, ?)");
@@ -26,5 +31,4 @@ if ($stmt->execute()) {
     header("Location: index.php?status=erro");
     exit();
 }
-
 ?>
