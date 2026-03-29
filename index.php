@@ -33,7 +33,7 @@
                     <li class="nav-item"><a class="nav-link" href="#servicos">Serviços</a></li>
                     <li class="nav-item"><a class="nav-link" href="#equipe">Equipe</a></li>
                     <li class="nav-item"><a class="nav-link" href="#swot">SWOT</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contato">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
                     <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
                         <a class="btn btn-nav" href="#contato">Fale Conosco</a>
                     </li>
